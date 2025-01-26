@@ -116,10 +116,11 @@ draw_one_frame :: () {
         color.y = 1;
         color.z = sin(theta)*-.5+.5;
         Clamp(*color.z, 0, 1);
-        color.w = 1;
+        color.w = sin(theta)*-.5+.5;
+        Clamp(*color.z, 0, 1);
 
         // Now, to draw the text:
-        text := "Simp!";
+        text := "Other Simp!";
 
         // We could just call Simp.draw_text to draw text! But we want to know the width
         // so that we can center the text, and to find the width, we have to do all the
